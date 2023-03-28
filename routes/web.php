@@ -22,3 +22,11 @@ Route::get('/profil', function () {
 Route::get('/dosen', function () {
     return view('dosen');
 });
+Route::get('/dosen/index', function () {
+    return view('dosen.index');
+});
+Route::get('/fakultas', function () {
+    //return view('fakultas.index', ['fikr' => 'Fakultas Ilmu Komputer dan Rekayasa']);
+    return view('fakultas.index') 
+                -> with('dataFakultas', ['FIKR', 'FEB']);
+});
