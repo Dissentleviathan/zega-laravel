@@ -4,13 +4,24 @@
 @section('subtitle', 'Fakultas')
 @section('content')
 
-{{-- <h2>Fakultas</h2> --}}
-{{-- <p>Ini halaman fakultas</p> --}}
-{{-- {{ $fikr }} --}}
+    {{-- <h2>Fakultas</h2> --}}
+    {{-- <p>Ini halaman fakultas</p> --}}
+    {{-- {{ $fikr }} --}}
 
-<ul>
-@foreach ($dataFakultas as $item)
-    <li>{{$item}}</li>
-@endforeach
-</ul>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nama Fakultas</th>
+            </tr>
+        </thead>
+
+        <body>
+            @foreach ($fakultas as $item)
+                <tr>
+                    <td>{{ $item }}</td>
+                </tr>
+            @endforeach
+            </tbody>
+    </table>
+
 @endsection
