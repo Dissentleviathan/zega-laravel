@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layout.main')
 
 @section('title', 'Halaman Fakultas')
 @section('subtitle', 'Fakultas')
