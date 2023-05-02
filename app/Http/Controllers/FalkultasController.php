@@ -21,7 +21,7 @@ class FalkultasController extends Controller
      */
     public function create()
     {
-        //
+        return view(('fakultas.create'));
     }
 
     /**

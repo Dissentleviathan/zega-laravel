@@ -7,8 +7,15 @@
 @section('content')
 @section('credit', 'Universitas Multi Data Palembang')
 
-<table class="table table-hover">
-    <thead>
+<div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Fakultas</h4>
+                  <a href="{{ route('fakultas.create')}}" class="btn btn-dark">Add</a>
+                  <div class="table-responsive">
+                    <table class="table table-striped">
+<thead>
         <tr>
             <th>Nama Fakultas</th>
             <TH>Nama Dekan</TH>
@@ -32,6 +39,16 @@
             </tr>
         @endforeach
     </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- row end -->
+          
+<table class="table table-hover">
+    
 
 </table>
 @endsection

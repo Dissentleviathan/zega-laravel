@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layout.main')
 
 @section('title', 'Halaman Prodi')
 @section('subtitle', 'Program Studi')
@@ -6,7 +6,7 @@
 
 @section('content')
     @section('credit','Universitas Multi Data Palembang')
-
+<h2>Program Studi</h2>
     <table class="table table-hover">
         <thead>
             <tr>
