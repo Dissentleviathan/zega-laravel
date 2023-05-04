@@ -11,6 +11,11 @@
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
+                    @if (Session::get('succes'))
+                    <div class="alert alert-success">
+                        {{ Session::get('succes')}}
+                    </div>
+                    @endif
                   <h4 class="card-title">Fakultas</h4>
                   <a href="{{ route('fakultas.create')}}" class="btn btn-dark">Add</a>
                   <div class="table-responsive">
@@ -46,9 +51,9 @@
             </div>
           </div>
           <!-- row end -->
-          
+
 <table class="table table-hover">
-    
+
 
 </table>
 @endsection
