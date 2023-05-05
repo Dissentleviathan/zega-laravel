@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Prodi;
+use App\Models\Fakultas;
 use Illuminate\Http\Request;
 
 class ProdiController extends Controller
@@ -15,7 +16,8 @@ class ProdiController extends Controller
     }
     public function create()
     {
-        return view(('prodi.create'));
+        $fakultas=Fakultas::orderBy('nama_fakultas', 'ASC')->get();
+        return view('prodi.create')->with('fakultas', $fakultas);
     }
 
     /**
@@ -29,15 +31,14 @@ class ProdiController extends Controller
         //validasi data
         $validasi = $request->validate([
             'nama_fakultas' => 'required',
-            'nama_dekan' => 'required',
-            'nama_wakil_dekan' => 'required'
+            'nama_prodi' => 'required|unique:prodi'
         ]);
        // dd($validasi);
 
        //buat objek dari model fakultas
        $prodi = new Prodi();
        $prodi->nama_prodi = $validasi['nama_prodi'];
-       $prodi->nama_fakultas = $validasi['nama_fakultas'];
+       $prodi->fakultas_id = $validasi['nama_fakultas'];
        $prodi->save(); // simpan
 
        return redirect()->route(('fakultas.index'))->with('succes', "Data Prodi ".$validasi ['nama_prodi']." Berhasil Disimpan");

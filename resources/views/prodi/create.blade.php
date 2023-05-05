@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layout.main')
 
 @section('title', 'Tambah Prodi')
 @section('subtitle', 'Prodi')
@@ -15,14 +15,19 @@
                         @csrf
                         <div class="form-group">
                             <label for="nama_fakultas">Nama Prodi</label>
-                            <input type="text" class="form-control" name="nama_prodi" placeholder="Nama Prodi">
+                            <input type="text" class="form-control" name="nama_prodi" placeholder="Nama Prodi"
+                                value="{{ old('nama_prodi') }}">
                             @error('nama_prodi')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="form-group">
                             <label for="nama_fakultas">Nama Fakultas</label>
-                            <input type="text" class="form-control" name="nama_fakultas" placeholder="Nama Fakultas">
+                            <select name="nama_fakultas" class="form-control js-example-basic-single">
+                                @foreach ($fakultas as $item)
+                                    <option value="{{ $item->id }}">{{ $item->nama_fakultas }}</option>
+                                @endforeach
+                            </select>
                             @error('nama_fakultas')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror

@@ -16,7 +16,6 @@
                     </div>
                 @endif
                 <h4 class="card-title">Program Studi</h4>
-                <a href="{{ route('prodi.create') }}" class="btn btn-dark">Add</a>
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
@@ -36,5 +35,8 @@
                             @endforeach
                         </tbody>
 
+
                     </table>
-                @endsection
+                    <div class="d-flex justify-content-end mt-3">
+                        <a href="{{ route('prodi.create') }} " class="btn btn-rounded btn-dark ">Add Data</a>
+                    @endsection

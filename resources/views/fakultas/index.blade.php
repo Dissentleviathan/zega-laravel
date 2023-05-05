@@ -17,7 +17,6 @@
                     </div>
                     @endif
                   <h4 class="card-title">Fakultas</h4>
-                  <a href="{{ route('fakultas.create')}}" class="btn btn-dark">Add</a>
                   <div class="table-responsive">
                     <table class="table table-striped">
 <thead>
@@ -54,6 +53,7 @@
 
 <table class="table table-hover">
 
-
+<div class="d-flex justify-content-end mt-3">
+                        <a href="{{ route('fakultas.create') }} " class="btn btn-rounded btn-dark ">Add Data</a>
 </table>
 @endsection
