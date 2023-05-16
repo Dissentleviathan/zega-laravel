@@ -10,9 +10,11 @@ class Mahasiswa extends Model
 {
     use HasFactory, HasUuids;
 
-    protected $table='prodi';
 
     public function fakultas(){
         return $this->belongsTo(Fakultas::class, 'fakultas_id');
+    }
+    public function prodi() {
+        return $this->belongsTo(Prodi::class, 'prodi_id');
     }
 }

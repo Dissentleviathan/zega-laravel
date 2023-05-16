@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Fakultas;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rules\Unique;
 
 class FalkultasController extends Controller
 {
@@ -34,7 +35,7 @@ class FalkultasController extends Controller
 
         //validasi data
         $validasi = $request->validate([
-            'nama_fakultas' => 'required',
+            'nama_fakultas' => 'required|unique:fakultas',
             'nama_dekan' => 'required',
             'nama_wakil_dekan' => 'required'
         ]);

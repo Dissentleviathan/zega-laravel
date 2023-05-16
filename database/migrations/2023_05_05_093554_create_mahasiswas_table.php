@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('mahasiswas', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('npm')->unique();
             $table->string('nama_mahasiswa');
+            $table->string('npm')->unique();
             $table->date('tanggal_lahir');
             $table->string('kota_lahir');
             $table->string('foto')->nullable;
