@@ -51,7 +51,7 @@
                   </div>
                   <div class="d-flex justify-content-end mt-3">
                       
-                      <a href="{{ route('mahasiswa.create')}} " class="btn btn-rounded btn-primary ">Tambah Data</a>
+                      <a href="{{ route('mahasiswa.create')}} " class="btn btn-rounded btn-dark">Add Data</a>
                   </div>
 
                 </div>

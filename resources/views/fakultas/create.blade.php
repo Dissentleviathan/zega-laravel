@@ -35,8 +35,8 @@
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
-                        <button type="submit" class="btn btn-primary me-2">Submit</button>
-                        <a href="{{ route('fakultas.index') }}" class="btn btn-light">Cancel</a>
+                        <button type="submit" class="btn btn-rounded btn-success me-2">Save</button>
+                        <a href="{{ route('fakultas.index') }}" class="btn btn-rounded btn-danger">Cancel</a>
                     </form>
 
                 </div>

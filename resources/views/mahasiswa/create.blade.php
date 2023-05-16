@@ -61,8 +61,8 @@
                            <span class="text-danger">{{$message}}</span>
                         @enderror
                       </div>
-                    <button type="submit" class="btn  btn-rounded btn-success me-2">Simpan</button>
-                    <a  href="{{route('mahasiswa.index')}}" class="btn btn-rounded btn-dark">batal</a>
+                    <button type="submit" class="btn  btn-rounded btn-success me-2">Save</button>
+                    <a  href="{{route('mahasiswa.index')}}" class="btn btn-rounded btn-danger">Cancel</a>
                   </form>
                 </div>
               </div>
