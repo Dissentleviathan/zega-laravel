@@ -13,10 +13,20 @@ class MahasiswaController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $data = Mahasiswa::all(); 
+        $search = $request->search;
+        $dataprodi = Prodi::all();
+        $data = Mahasiswa::with('prodi')
+        ->where('nama_mahasiswa', 'LIKE', '%'. $search.'%')
+        ->orWhere('kota_lahir', 'LIKE', '%'.$search.'%')
+        ->orWhereHas('prodi', function($query) use($search) {
+            $query ->where('nama_prodi', 'LIKE', '%'.$search.'%');
+        })
+        ->orderBy('created_at', 'DESC')
+        ->paginate(5);
         return view('mahasiswa.index')->with('mahasiswas',$data);
+
     }
 
     /**
@@ -97,7 +107,14 @@ class MahasiswaController extends Controller
      */
     public function destroy(Mahasiswa $mahasiswa)
     {
-
+        //dd($mahasiswa);
+        $mahasiswa->delete();
+        return redirect()->route('mahasiswa.index')->with('succes', 'Data Berhasil Dihapus!');
         
+    }
+    public function multiDelete(Request $request)
+    {
+        Mahasiswa::whereIn('id', $request->get('selected'))->delete();
+        return response("Selected mahasiswa(s) delete succesfully.", 200);
     }
 }
