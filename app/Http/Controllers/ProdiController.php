@@ -41,7 +41,7 @@ class ProdiController extends Controller
        $prodi->fakultas_id = $validasi['nama_fakultas'];
        $prodi->save(); // simpan
 
-       return redirect()->route(('fakultas.index'))->with('succes', "Data Prodi ".$validasi ['nama_prodi']." Berhasil Disimpan");
+       return redirect()->route(('prodi.index'))->with('succes', "Data Prodi ".$validasi ['nama_prodi']." Berhasil Disimpan");
     }
 
     /**

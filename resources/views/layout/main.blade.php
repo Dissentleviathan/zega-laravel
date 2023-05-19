@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Spica Admin</title>
+    <title>Universitas Multi Data Palembang</title>
     <!-- base:css -->
     <link rel="stylesheet" href="{{ asset('vendors/mdi/css/materialdesignicons.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendors/css/vendor.bundle.base.css') }}">
@@ -24,12 +24,7 @@
             <div class="col-md-12 p-0 m-0">
                 <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
                     <div class="ps-lg-1">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <p class="mb-0 font-weight-medium me-3 buy-now-text">Free 24/7 customer support, updates,
-                                and more with this template!</p>
-                            <a href="https://www.bootstrapdash.com/product/spica-admin/?utm_source=organic&utm_medium=banner&utm_campaign=buynow_demo"
-                                target="_blank" class="btn me-2 buy-now-btn border-0">Get Pro</a>
-                        </div>
+                        
                     </div>
                     <div class="d-flex align-items-center justify-content-between">
                         <a href="https://www.bootstrapdash.com/product/spica-admin/"><i
@@ -45,33 +40,29 @@
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <ul class="nav">
                 <li class="nav-item sidebar-category">
-                    <p>Navigation</p>
+                    <p>Navigasi</p>
                     <span></span>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('fakultas') }}">
                         <i class="mdi mdi-view-list menu-icon"></i>
                         <span class="menu-title">Fakultas</span>
-                        <div class="badge badge-info badge-pill">2</div>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('prodi') }}">
                         <i class="mdi mdi-view-module menu-icon"></i>
-                        <span class="menu-title">Prodi</span>
-                        <div class="badge badge-info badge-pill">2</div>
-                    </a>
+                        <span class="menu-title">Prodi</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('mahasiswa') }}">
                         <i class="mdi mdi-view-module menu-icon"></i>
                         <span class="menu-title">Mahasiswa</span>
-                        <div class="badge badge-info badge-pill">2</div>
                     </a>
                 </li>
                 <li class="nav-item sidebar-category">
-                    <p>Components</p>
-                    <span></span>
+                    <p>Komponen</p>
+                    <span></span>   
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
@@ -82,35 +73,35 @@
                     </a>
                     <div class="collapse" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
+                            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Tombol</a>
                             </li>
                             <li class="nav-item"> <a class="nav-link"
-                                    href="pages/ui-features/typography.html">Typography</a></li>
+                                    href="pages/ui-features/typography.html">Tipografi</a></li>
                         </ul>
                     </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="pages/forms/basic_elements.html">
                         <i class="mdi mdi-view-headline menu-icon"></i>
-                        <span class="menu-title">Form elements</span>
+                        <span class="menu-title">Bentuk Elements</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="pages/charts/chartjs.html">
                         <i class="mdi mdi-chart-pie menu-icon"></i>
-                        <span class="menu-title">Charts</span>
+                        <span class="menu-title">Bagan</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="pages/tables/basic-table.html">
                         <i class="mdi mdi-grid-large menu-icon"></i>
-                        <span class="menu-title">Tables</span>
+                        <span class="menu-title">Tabel</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="pages/icons/mdi.html">
                         <i class="mdi mdi-emoticon menu-icon"></i>
-                        <span class="menu-title">Icons</span>
+                        <span class="menu-title">Ikon</span>
                     </a>
                 </li>
                 <li class="nav-item sidebar-category">
@@ -121,7 +112,7 @@
                     <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false"
                         aria-controls="auth">
                         <i class="mdi mdi-account menu-icon"></i>
-                        <span class="menu-title">User Pages</span>
+                        <span class="menu-title">Halaman Pengguna</span>
                         <i class="menu-arrow"></i>
                     </a>
                     <div class="collapse" id="auth">
@@ -138,21 +129,6 @@
                                     Lockscreen </a></li>
                         </ul>
                     </div>
-                </li>
-                <li class="nav-item sidebar-category">
-                    <p>Apps</p>
-                    <span></span>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="docs/documentation.html">
-                        <i class="mdi mdi-file-document-box-outline menu-icon"></i>
-                        <span class="menu-title">Documentation</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.bootstrapdash.com/product/spica-admin/">
-                        <button class="btn bg-danger btn-sm menu-title">Upgrade to pro</button>
-                    </a>
                 </li>
             </ul>
         </nav>
@@ -171,11 +147,8 @@
                         <a class="navbar-brand brand-logo-mini" href="index.html"><img
                                 src="{{ asset('images/logo-mini.svg') }}" alt="logo" /></a>
                     </div>
-                    <h4 class="font-weight-bold mb-0 d-none d-md-block mt-1">Welcome back, Brandon Haynes</h4>
+                    <h4 class="font-weight-bold mb-0 d-none d-md-block mt-1">Welcome back, </h4>
                     <ul class="navbar-nav navbar-nav-right">
-                        <li class="nav-item">
-                            <h4 class="mb-0 font-weight-bold d-none d-xl-block">Mar 12, 2019 - Apr 10, 2019</h4>
-                        </li>
                         <li class="nav-item dropdown me-1">
                             <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
                                 id="messageDropdown" href="#" data-bs-toggle="dropdown">
@@ -191,10 +164,10 @@
                                             class="profile-pic">
                                     </div>
                                     <div class="preview-item-content flex-grow">
-                                        <h6 class="preview-subject ellipsis font-weight-normal">David Grey
+                                        <h6 class="preview-subject ellipsis font-weight-normal">Ahmad Wahana Jaya
                                         </h6>
                                         <p class="font-weight-light small-text text-muted mb-0">
-                                            The meeting is cancelled
+                                           Jadi dk?
                                         </p>
                                     </div>
                                 </a>
@@ -204,10 +177,10 @@
                                             class="profile-pic">
                                     </div>
                                     <div class="preview-item-content flex-grow">
-                                        <h6 class="preview-subject ellipsis font-weight-normal">Tim Cook
+                                        <h6 class="preview-subject ellipsis font-weight-normal">Muhammad Mauladi
                                         </h6>
                                         <p class="font-weight-light small-text text-muted mb-0">
-                                            New product launch
+                                            Bagi coding oh
                                         </p>
                                     </div>
                                 </a>
@@ -217,10 +190,10 @@
                                             class="profile-pic">
                                     </div>
                                     <div class="preview-item-content flex-grow">
-                                        <h6 class="preview-subject ellipsis font-weight-normal"> Johnson
+                                        <h6 class="preview-subject ellipsis font-weight-normal">Danang Aji Pangestu
                                         </h6>
                                         <p class="font-weight-light small-text text-muted mb-0">
-                                            Upcoming board meeting
+                                          Payo loer
                                         </p>
                                     </div>
                                 </a>
