@@ -8,9 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Fakultas extends Model
 {
-    use HasFactory, HasUuids;
-    
-
+    use HasFactory;
+    public $incrementing = false;
+    protected $keyType = 'String';
+    protected $fillable = [
+        'id',
+           'nama_fakultas',
+            'nama_dekan',
+            'nama_wakil_dekan',
+    ];
     public function prodi(){
         return $this->hasMany(Prodi::class);
     }

@@ -7,6 +7,8 @@ use GuzzleHttp\Client;
 use App\Models\Prodi;
 use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+
 
 class MahasiswaController extends Controller
 {
@@ -51,20 +53,27 @@ class MahasiswaController extends Controller
             'foto' =>'required|file|image|max:5000',
             "prodi_id" =>'required'
         ]);
+       
+
 
         $temp = $request->foto->getClientOriginalExtension();
         $nama_foto = $validasi['npm'] . '.' . $temp;
        $path = $request->foto->storeAs('public/images', $nama_foto);
+        $validasi['foto']=$nama_foto;
+        $validasi['id'] = Str::uuid();
+
+        Mahasiswa::create($validasi);
+
        
         // dd($validasi);
-        $mahasiswa = new Mahasiswa();
+        // $mahasiswa = new Mahasiswa();
         
-        $mahasiswa->nama_mahasiswa = $validasi['nama_mahasiswa'];
-        $mahasiswa->npm = $validasi['npm'];
-        $mahasiswa->tanggal_lahir = $validasi['tanggal_lahir'];
-        $mahasiswa->kota_lahir = $validasi['kota_lahir'];
-        $mahasiswa->foto =$nama_foto;
-        $mahasiswa->prodi_id = $validasi['prodi_id'];
+        // $mahasiswa->nama_mahasiswa = $validasi['nama_mahasiswa'];
+        // $mahasiswa->npm = $validasi['npm'];
+        // $mahasiswa->tanggal_lahir = $validasi['tanggal_lahir'];
+        // $mahasiswa->kota_lahir = $validasi['kota_lahir'];
+        // $mahasiswa->foto =$nama_foto;
+        // $mahasiswa->prodi_id = $validasi['prodi_id'];
         
 
         //upload foto

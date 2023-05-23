@@ -8,7 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Prodi extends Model
 {
-    use HasFactory, HasUuids;
+    use HasFactory;
+    public $incrementing = false;
+    protected $keyType = 'String';
+    protected $fillable = [
+        'id',
+            'nama_prodi',
+            'fakultas_id',
+    ];
 
     protected $table='prodi';
 

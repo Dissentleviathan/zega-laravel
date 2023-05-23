@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Fakultas;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Unique;
+use Illuminate\Support\Str;
 
 class FalkultasController extends Controller
 {
@@ -40,13 +41,14 @@ class FalkultasController extends Controller
             'nama_wakil_dekan' => 'required'
         ]);
        // dd($validasi);
-
+       $validasi ['id']=Str::uuid();
+        Fakultas::create($validasi);
        //buat objek dari model fakultas
-       $fakultas = new Fakultas();
-       $fakultas->nama_fakultas = $validasi['nama_fakultas'];
-       $fakultas->nama_dekan = $validasi['nama_dekan'];
-       $fakultas->nama_wakil_dekan = $validasi['nama_wakil_dekan'];
-       $fakultas->save(); // simpan
+    //    $fakultas = new Fakultas();
+    //    $fakultas->nama_fakultas = $validasi['nama_fakultas'];
+    //    $fakultas->nama_dekan = $validasi['nama_dekan'];
+    //    $fakultas->nama_wakil_dekan = $validasi['nama_wakil_dekan'];
+    //    $fakultas->save(); // simpan
 
        return redirect()->route(('fakultas.index'))->with('succes', "Data Fakultas ".$validasi ['nama_fakultas']." Berhasil Disimpan");
     }

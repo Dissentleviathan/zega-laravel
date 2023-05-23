@@ -15,6 +15,13 @@
                   </p>
                   <form class="forms-sample" action="{{ route('mahasiswa.store')}} " method="post" enctype="multipart/form-data">
                     @csrf
+                    <div class="form-group">
+                      <label for="foto">Foto</label>
+                      <input type="file" class="form-control" name="foto" placeholder="foto">
+                      @error('foto')
+                         <span class="text-danger">{{$message}}</span>
+                      @enderror 
+                    </div>
                      <div class="form-group">
                       <label for="nama_mahasiswa">Nama</label>
                       <input type="text" class="form-control" name="nama_mahasiswa" placeholder="Nama">
@@ -43,13 +50,6 @@
                            <span class="text-danger">{{$message}}</span>
                         @enderror
                       </div>
-                      <div class="form-group">
-                      <label for="foto">Foto</label>
-                      <input type="file" class="form-control" name="foto" placeholder="foto">
-                      @error('foto')
-                         <span class="text-danger">{{$message}}</span>
-                      @enderror 
-                    </div>
                       <div class="form-group">
                         <label for="prodi_id">Pilih Prodi</label>
                        <select name="prodi_id" class="form-control js-example-basic-single">
